@@ -1,0 +1,23 @@
+<!-- EJERCICIO 01 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Ejercicio 01</title></head>
+<body>
+<script>
+let n1 = parseFloat(prompt("Ingrese nota 1:"));
+let w1 = parseFloat(prompt("Ingrese peso de nota 1 (en %):"));
+let n2 = parseFloat(prompt("Ingrese nota 2:"));
+let w2 = parseFloat(prompt("Ingrese peso de nota 2 (en %):"));
+let n3 = parseFloat(prompt("Ingrese nota 3:"));
+let w3 = parseFloat(prompt("Ingrese peso de nota 3 (en %):"));
+
+if (isNaN(n1)||isNaN(w1)||isNaN(n2)||isNaN(w2)||isNaN(n3)||isNaN(w3)) {
+  alert("Entrada invalida");
+} else {
+  let promedio = (n1*w1 + n2*w2 + n3*w3) / 100;
+  alert("Promedio ponderado final: " + promedio.toFixed(2));
+  document.body.innerHTML = "<h3>Promedio ponderado final: " + promedio.toFixed(2) + "</h3>";
+}
+</script>
+</body>
+</html>

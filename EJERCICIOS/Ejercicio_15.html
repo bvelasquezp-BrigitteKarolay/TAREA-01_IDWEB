@@ -1,0 +1,34 @@
+<!-- EJERCICIO 15 -->
+ <!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Ejercicio 15</title></head>
+<body>
+<script>
+let secreto = Math.floor(Math.random() * 100) + 1;
+let intentos = 6;
+let adivino = false;
+let usados = 0;
+
+while (intentos > 0 && !adivino) {
+  let num = parseInt(prompt("Adivine el numero entre 1 y 100. Intentos restantes: " + intentos),10);
+  if (isNaN(num) || num < 1 || num > 100) {
+    alert("Numero invalido");
+  } else {
+    usados++;
+    if (num === secreto) { adivino = true; break; }
+    else if (num < secreto) alert("El numero secreto es mayor");
+    else alert("El numero secreto es menor");
+  }
+  intentos--;
+}
+
+if (adivino) {
+  alert("Felicidades! Adivinaste en " + usados + " intentos. Numero: " + secreto);
+  document.body.innerHTML = "<h3>Ganaste. Numero: " + secreto + ". Intentos: " + usados + "</h3>";
+} else {
+  alert("Perdiste. Numero secreto: " + secreto);
+  document.body.innerHTML = "<h3>Perdiste. Numero secreto: " + secreto + "</h3>";
+}
+</script>
+</body>
+</html>

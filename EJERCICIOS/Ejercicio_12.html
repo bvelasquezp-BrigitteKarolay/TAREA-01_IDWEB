@@ -1,0 +1,24 @@
+<!-- EJERCICIO 12 -->
+ <!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Ejercicio 12</title></head>
+<body>
+<script>
+let n = parseInt(prompt("Ingrese n (entero positivo):"),10);
+if (isNaN(n) || n <= 0) {
+  alert("Entrada invalida");
+} else {
+  let a = 0, b = 1;
+  let salida = "";
+  for (let i = 1; i <= n; i++) {
+    salida += a + (i < n ? ", " : "");
+    let siguiente = a + b;
+    a = b;
+    b = siguiente;
+  }
+  alert("Serie Fibonacci: " + salida);
+  document.body.innerHTML = "<pre>Serie Fibonacci: " + salida + "</pre>";
+}
+</script>
+</body>
+</html>

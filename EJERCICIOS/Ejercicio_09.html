@@ -1,0 +1,22 @@
+<!-- EJERCICIO 09 -->
+ <!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Ejercicio 09</title></head>
+<body>
+<script>
+let nota = parseFloat(prompt("Ingrese nota 0 a 100:"));
+if (isNaN(nota) || nota < 0 || nota > 100) {
+  alert("Nota invalida");
+} else {
+  let letra;
+  if (nota >= 90) letra = "A";
+  else if (nota >= 80) letra = "B";
+  else if (nota >= 70) letra = "C";
+  else if (nota >= 60) letra = "D";
+  else letra = "F";
+  alert("Calificacion: " + letra);
+  document.body.innerHTML = "<h3>Calificacion: " + letra + "</h3>";
+}
+</script>
+</body>
+</html>

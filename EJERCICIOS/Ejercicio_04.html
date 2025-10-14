@@ -1,0 +1,21 @@
+<!-- EJERCICIO 04 -->
+ <!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Ejercicio 04</title></head>
+<body>
+<script>
+let capital = parseFloat(prompt("Capital inicial:"));
+let tasa = parseFloat(prompt("Tasa anual (%) :"));
+let anos = parseFloat(prompt("Numero de años:"));
+
+if (isNaN(capital)||isNaN(tasa)||isNaN(anos)) {
+  alert("Entrada invalida");
+} else {
+  let monto = capital * Math.pow(1 + tasa/100, anos);
+  let interes = monto - capital;
+  alert("Monto final: " + monto.toFixed(2) + "\\nInteres ganado: " + interes.toFixed(2));
+  document.body.innerHTML = "<pre>Monto final: " + monto.toFixed(2) + "\\nInteres ganado: " + interes.toFixed(2) + "</pre>";
+}
+</script>
+</body>
+</html>

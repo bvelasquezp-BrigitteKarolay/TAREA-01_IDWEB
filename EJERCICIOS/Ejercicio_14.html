@@ -1,0 +1,24 @@
+<!-- EJERCICIO 14 -->
+ <!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Ejercicio 14</title></head>
+<body>
+<script>
+let n = parseInt(prompt("Ingrese n (>=2):"),10);
+if (isNaN(n) || n < 2) {
+  alert("Entrada invalida");
+} else {
+  let lista = [];
+  for (let i = 2; i <= n; i++) {
+    let esPrimo = true;
+    for (let j = 2; j <= Math.sqrt(i); j++) {
+      if (i % j === 0) { esPrimo = false; break; }
+    }
+    if (esPrimo) lista.push(i);
+  }
+  alert("Primos hasta " + n + ": " + lista.join(", ") + "\\nCantidad: " + lista.length);
+  document.body.innerHTML = "<pre>Primos hasta " + n + ": " + lista.join(", ") + "\\nCantidad: " + lista.length + "</pre>";
+}
+</script>
+</body>
+</html>

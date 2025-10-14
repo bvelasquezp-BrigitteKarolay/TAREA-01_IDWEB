@@ -1,0 +1,24 @@
+<!-- EJERCICIO 08 -->
+ <!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Ejercicio 08</title></head>
+<body>
+<script>
+let peso = parseFloat(prompt("Peso en kg:"));
+let estatura = parseFloat(prompt("Estatura en m:"));
+
+if (isNaN(peso)||isNaN(estatura)||estatura <= 0) {
+  alert("Entrada invalida");
+} else {
+  let imc = peso / (estatura * estatura);
+  let cat = "";
+  if (imc < 18.5) cat = "Bajo peso";
+  else if (imc < 25) cat = "Normal";
+  else if (imc < 30) cat = "Sobrepeso";
+  else cat = "Obesidad";
+  alert("IMC: " + imc.toFixed(2) + " - " + cat);
+  document.body.innerHTML = "<h3>IMC: " + imc.toFixed(2) + " - " + cat + "</h3>";
+}
+</script>
+</body>
+</html>

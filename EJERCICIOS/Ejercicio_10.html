@@ -1,0 +1,28 @@
+<!-- EJERCICIO 10 -->
+ <!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Ejercicio 10</title></head>
+<body>
+<script>
+let a = parseFloat(prompt("Lado a:"));
+let b = parseFloat(prompt("Lado b:"));
+let c = parseFloat(prompt("Lado c:"));
+
+if (isNaN(a)||isNaN(b)||isNaN(c)||a<=0||b<=0||c<=0) {
+  alert("Entrada invalida");
+} else {
+  if ((a + b > c) && (a + c > b) && (b + c > a)) {
+    let tipo;
+    if (a === b && b === c) tipo = "Equilatero";
+    else if (a === b || a === c || b === c) tipo = "Isosceles";
+    else tipo = "Escaleno";
+    alert("Forman un triangulo valido. Tipo: " + tipo);
+    document.body.innerHTML = "<h3>Forman un triangulo valido. Tipo: " + tipo + "</h3>";
+  } else {
+    alert("No forman un triangulo valido");
+    document.body.innerHTML = "<h3>No forman un triangulo valido</h3>";
+  }
+}
+</script>
+</body>
+</html>

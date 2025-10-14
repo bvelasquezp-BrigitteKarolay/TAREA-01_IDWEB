@@ -1,0 +1,32 @@
+<!-- EJERCICIO 13 -->
+ <!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Ejercicio 13</title></head>
+<body>
+<script>
+let suma = 0;
+let contador = 0;
+let mayores = 0;
+while (true) {
+  let entrada = prompt("Ingrese edad (ESCRIBA FIN PARA TERMINAR):");
+  if (entrada === null) break;
+  if (entrada.toLowerCase() === "fin") break;
+  let edad = parseInt(entrada,10);
+  if (!isNaN(edad) && edad >= 0) {
+    suma += edad;
+    contador++;
+    if (edad >= 18) mayores++;
+  } else {
+    alert("Edad invalida");
+  }
+}
+if (contador > 0) {
+  let promedio = suma / contador;
+  alert("Promedio de edades: " + promedio.toFixed(2) + "\\nMayores de edad: " + mayores);
+  document.body.innerHTML = "<pre>Promedio de edades: " + promedio.toFixed(2) + "\\nMayores de edad: " + mayores + "</pre>";
+} else {
+  alert("No se ingresaron edades validas");
+}
+</script>
+</body>
+</html>

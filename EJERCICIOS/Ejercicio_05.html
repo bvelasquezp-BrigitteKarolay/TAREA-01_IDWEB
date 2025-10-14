@@ -1,0 +1,18 @@
+<!-- EJERCICIO 05 -->
+ <!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Ejercicio 05</title></head>
+<body>
+<script>
+let kmh = parseFloat(prompt("Velocidad en km/h:"));
+if (isNaN(kmh)) {
+  alert("Entrada invalida");
+} else {
+  let ms = kmh * 1000 / 3600;
+  let mph = kmh / 1.60934;
+  alert("m/s: " + ms + "\\nmph: " + mph);
+  document.body.innerHTML = "<pre>m/s: " + ms + "\\nmph: " + mph + "</pre>";
+}
+</script>
+</body>
+</html>

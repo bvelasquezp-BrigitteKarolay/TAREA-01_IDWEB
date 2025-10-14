@@ -1,0 +1,22 @@
+<!-- EJERCICIO 06 -->
+ <!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Ejercicio 06</title></head>
+<body>
+<script>
+let a = parseFloat(prompt("Ingrese numero 1:"));
+let b = parseFloat(prompt("Ingrese numero 2:"));
+let c = parseFloat(prompt("Ingrese numero 3:"));
+
+if (isNaN(a)||isNaN(b)||isNaN(c)) {
+  alert("Entrada invalida");
+} else {
+  let mayor = a;
+  if (b > mayor) mayor = b;
+  if (c > mayor) mayor = c;
+  alert("El numero mayor es: " + mayor);
+  document.body.innerHTML = "<h3>El numero mayor es: " + mayor + "</h3>";
+}
+</script>
+</body>
+</html>

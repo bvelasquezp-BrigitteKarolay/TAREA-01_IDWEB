@@ -1,0 +1,40 @@
+<!-- EJERCICIO 07 -->
+ <!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Ejercicio 07</title></head>
+<body>
+<script>
+let x = parseFloat(prompt("Ingrese primer numero:"));
+let y = parseFloat(prompt("Ingrese segundo numero:"));
+let op = prompt("Ingrese operador (+, -, , /, %, *):");
+
+if (isNaN(x)||isNaN(y)) {
+  alert("Entrada invalida");
+} else {
+  let resultado;
+  let valido = true;
+  switch(op) {
+    case "+":
+      resultado = x + y; break;
+    case "-":
+      resultado = x - y; break;
+    case "*":
+      resultado = x * y; break;
+    case "/":
+      if (y === 0) { alert("Error division por cero"); valido = false; } else resultado = x / y;
+      break;
+    case "%":
+      resultado = x % y; break;
+    case "**":
+      resultado = Math.pow(x,y); break;
+    default:
+      valido = false; alert("Operador invalido");
+  }
+  if (valido) {
+    alert("Resultado: " + resultado);
+    document.body.innerHTML = "<h3>Resultado: " + resultado + "</h3>";
+  }
+}
+</script>
+</body>
+</html>
