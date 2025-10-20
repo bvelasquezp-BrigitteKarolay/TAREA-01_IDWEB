@@ -8,14 +8,15 @@ let capital = parseFloat(prompt("Capital inicial:"));
 let tasa = parseFloat(prompt("Tasa anual (%) :"));
 let anos = parseFloat(prompt("Numero de años:"));
 
-if (isNaN(capital)||isNaN(tasa)||isNaN(anos)) {
+if (isNaN(capital)||isNaN(tasa)||isNaN(años)) {
   alert("Entrada invalida");
 } else {
-  let monto = capital * Math.pow(1 + tasa/100, anos);
+  let monto = capital * Math.pow(1 + tasa/100, años);
   let interes = monto - capital;
   alert("Monto final: " + monto.toFixed(2) + "\\nInteres ganado: " + interes.toFixed(2));
   document.body.innerHTML = "<pre>Monto final: " + monto.toFixed(2) + "\\nInteres ganado: " + interes.toFixed(2) + "</pre>";
 }
 </script>
 </body>
+
 </html>
